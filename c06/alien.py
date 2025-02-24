@@ -48,3 +48,10 @@ print(alien_0)
 del alien_0['points']
 print(alien_0)
 
+print('\nUsing [] on item that is not in the dict, leads to errors')
+
+alien_0 = {'color': 'green', 'speed': 'slow'}
+# print(alien_0['points'])
+print("Using the get method, allows for no errors")
+point_value = alien_0.get('points', 'No point value assigned.')
+print(point_value)
