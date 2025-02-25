@@ -38,19 +38,11 @@ print('The following unique languages have been mentioned:')
 for language in set(favorite_languages.values()):
     print(language.title())
 
-print('\nMultiple languages')
+print('\n\n6-6.py')
+people_to_poll = ['jen', 'phil', 'jacob', 'emily', 'jackson']
 
-favorite_languages = {
-    'jen': ['python', 'rust'],
-    'sarah': ['c'],
-    'edward': ['rust', 'go'],
-    'phil': ['python', 'haskell'],
-    }
-
-for name, languages in favorite_languages.items():
-    if len(languages) == 1:
-        print(f"\n{name.title()}'s favorite language is:")
+for people in people_to_poll:
+    if people in favorite_languages.keys():
+        print(f'{people.title()}, thank you for taking the poll!')
     else:
-        print(f"\n{name.title()}'s favorite languages are:")
-    for language in languages:
-        print(f"\t{language.title()}")
+        print(f'{people.title()}, please take our poll.')
